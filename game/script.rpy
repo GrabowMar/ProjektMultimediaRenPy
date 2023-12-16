@@ -1,0 +1,94 @@
+﻿label start:
+    # play music 'audio/ambience/birds.wav'
+    scene bg hallway
+    "This is a showcase of the Ren'Py features that I frequently find myself using."
+
+    show vivian
+    vivian "Hello!"
+
+    show vivian laugh
+    vivian "You are funny."
+
+    show vivian neutralAway blush
+    vivian "I can't believe I'm saying this but..."
+
+    show vivian neutralDown -blush
+    vivian "Uhhh... I don't know how to tell you this but..."
+
+    "You can configure more expressions by mixing and matching eyes, brows, and mouth on the expression showcase screen."
+
+    call screen expression_showcase_screen()
+
+    show vivian smile blush
+    vivian "Time sure flies when I'm with you."
+
+    $ time_of_day = DUSK
+    vivian "I can't believe it's already getting dark. Let's go somewhere else before it gets dark."
+
+    $ time_of_day = NIGHT
+    scene bg house with dissolve
+    vivian "Now it's dark and we are in the woods. Spooky!"
+
+    $ sprite_effect = DIM
+    vivian "Would it be better if I turn on the flashlight on my phone?"
+    vivian "... This place is giving me déjà vu..."
+    hide vivian
+    scene bg black with eyeclose
+
+    $ time_of_day = SEPIA
+    $ sprite_effect = None
+    scene bg house
+    show vivian sadDown tears at left
+    show vivian2 at right
+    "Now we are in flashback mode."
+    vivian "... You promised us to accept us for who we are, didn't you?"
+    hide vivian
+    hide vivian2
+
+    $ time_of_day = NIGHT
+    $ sprite_effect = DIM
+    scene bg black
+    scene bg house with eyeopen
+    "Now back to the present timeline."
+    show vivian smile -tears
+    vivian "Hey. You are spacing out. Did I say something strange?"
+
+    vivian "Hey... are you okay? You look sleepy."
+    hide vivian
+    scene bg black with eyeclose
+
+label paperplane:
+    scene bg paperplane with dissolve
+    "I remember this girl..."
+    show sprite paperplane with dissolve
+
+    "And paper airplanes..."
+    "Was it summer?"
+
+    hide sprite paperplane
+    scene bg black with eyeclose
+
+label pool:
+    # whenever you use Pan, need to reset at the next scene
+    scene bg pool at Pan((100, 100), (100, 1097), 40, repeat=True)
+        # truecenter        
+    # with dissolve
+    show sprite pool:
+        parallel:
+            truecenter
+            floating
+    show effects pool:
+        parallel:
+            truecenter
+            additive_blend
+
+    "I remember this girl..."
+    "We went swimming together..."
+    "It was on a sunny day in August..."
+
+    hide sprite pool
+    hide effects pool
+    scene bg black at truecenter with eyeclose
+    scene bg snowbridge
+    "This concludes our effect showcase. More effects on the way!"
+    return
