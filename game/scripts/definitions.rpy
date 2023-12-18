@@ -18,9 +18,9 @@ init python:
 
     # define italics and bold fonts
     # the arguments are: font file, boldness, italics
-    config.font_replacement_map["fonts/Mali/Mali-Regular.ttf", True, False] = ("fonts/Mali/Mali-Bold.ttf", False, False)
-    config.font_replacement_map["fonts/Mali/Mali-Regular.ttf", False, True] = ("fonts/Mali/Mali-Italic.ttf", False, False)
-    config.font_replacement_map["fonts/Mali/Mali-Regular.ttf", True, True] = ("fonts/Mali/Mali-BoldItalic.ttf", False, False)
+    config.font_replacement_map["fonts/Roboto/Roboto-Regular.ttf", True, False] = ("fonts/Roboto/Roboto-Bold.ttf", False, False)
+    config.font_replacement_map["fonts/Roboto/Roboto-Regular.ttf", False, True] = ("fonts/Roboto/Roboto-Italic.ttf", False, False)
+    config.font_replacement_map["fonts/Roboto/Roboto-Regular.ttf", True, True] = ("fonts/Roboto/Roboto-BoldItalic.ttf", False, False)
 
     ## for character sprites
     class Picker(object):
@@ -101,6 +101,8 @@ init python:
             renpy.image(image_name, ConditionSwitch(*args))
 
 init:
+    
+
     define vivian = Character("Vivian")
     # use this instead if we want side image
     # define vivian = Character("Vivian", image='vivian')
@@ -201,7 +203,7 @@ init:
 
 
 
-    define aian_position = Position(xpos=0.5, ypos=0.65)  # adjust xpos and ypos as needed
+    define aian_position = Position(xpos=0.5, ypos=0.90)  # adjust xpos and ypos as needed
     define aian = Character('Aian')
     ## character sprites
     define aianExpressions = [
@@ -240,43 +242,102 @@ init:
         "crying crying"
     ]
     
+    transform wobble:
+        rotate 1.0
+        linear 1.0 rotate -1.0
+        linear 1.0 rotate 1.0
+        repeat
+
+    transform wobble2:
+        xpos 0.04
+        ypos 0.23
+        linear 1.0 ypos 0.25
+        linear 1.0 ypos 0.23
+        repeat
+
     layeredimage aian:
-        always "aian_base"
+        always "aian_base" at wobble
         group expressions:
-            attribute GRRRRRR default "aian_GRRRRRR"
-            attribute happyCrying "aian_happyCrying"
-            attribute holUP "aian_holUP"
-            attribute irritated "aian_irritated"
-            attribute kawai "aian_kawai"
-            attribute kissy "aian_kissy"
-            attribute love "aian_love"
-            attribute dead "aian_dead"
-            attribute disgusted "aian_disgusted"
-            attribute dizzy "aian_dizzy"
-            attribute flirty "aian_flirty"
-            attribute flushes "aian_flushes"
-            attribute grossedOut "aian_grossedOut"
-            attribute mimic "aian_mimic"
-            attribute notConfident "aian_notConfident"
-            attribute omnomnom "aian_omnomnom"
-            attribute pissedOff "aian_pissedOff"
-            attribute POG "aian_POG"
-            attribute readyForCarnage "aian_readyForCarnage"
-            attribute realisation "aian_realisation"
-            attribute scared "aian_scared"
-            attribute smug "aian_smug"
-            attribute stupidHappy "aian_stupidHappy"
-            attribute thinking "aian_thinking"
-            attribute tongue "aian_tongue"
-            attribute ughhhh "aian_ughhhh"
-            attribute unsure "aian_unsure"
-            attribute vicious "aian_vicious"
-            attribute almostDead "aian_almostDead"
-            attribute confident "aian_confident"
-            attribute confused "aian_confused"
-            attribute crying "aian_crying"
+            attribute GRRRRRR default "aian_GRRRRRR" at wobble2
+            attribute happyCrying "aian_happyCrying" at wobble2
+            attribute holUP "aian_holUP" at wobble2
+            attribute irritated "aian_irritated" at wobble2
+            attribute kawai "aian_kawai" at wobble2
+            attribute kissy "aian_kissy" at wobble2
+            attribute love "aian_love" at wobble2
+            attribute dead "aian_dead" at wobble2
+            attribute disgusted "aian_disgusted" at wobble2
+            attribute dizzy "aian_dizzy" at wobble2
+            attribute flirty "aian_flirty" at wobble2
+            attribute flushes "aian_flushes" at wobble2
+            attribute grossedOut "aian_grossedOut" at wobble2
+            attribute mimic "aian_mimic" at wobble2
+            attribute notConfident "aian_notConfident" at wobble2
+            attribute omnomnom "aian_omnomnom" at wobble2
+            attribute pissedOff "aian_pissedOff" at wobble2
+            attribute POG "aian_POG" at wobble2
+            attribute readyForCarnage "aian_readyForCarnage" at wobble2
+            attribute realisation "aian_realisation" at wobble2
+            attribute scared "aian_scared" at wobble2
+            attribute smug "aian_smug" at wobble2
+            attribute stupidHappy "aian_stupidHappy" at wobble2
+            attribute thinking "aian_thinking" at wobble2
+            attribute tongue "aian_tongue" at wobble2
+            attribute ughhhh "aian_ughhhh" at wobble2
+            attribute unsure "aian_unsure" at wobble2
+            attribute vicious "aian_vicious" at wobble2
+            attribute almostDead "aian_almostDead" at wobble2
+            attribute confident "aian_confident" at wobble2
+            attribute confused "aian_confused" at wobble2
+            attribute crying "aian_crying" at wobble2
             
         attribute_function Picker(aianExpressions)
+
+
+    image bg attack_cybersecurity = "images/bg/bg attack_cybersecurity.png"
+    image bg attack_eliminationAI = "images/bg/bg attack_eliminationAI.png"
+    image bg attack_politicalInstability = "images/bg/bg attack_politicalInstability.png"
+    image bg attack_socialMedia = "images/bg/bg attack_socialMedia.png"
+    image bg background_car = "images/bg/bg background_car.png"
+    image bg background_datacenter = "images/bg/bg background_datacenter.png"
+    image bg background_desk = "images/bg/bg background_desk.png"
+    image bg background_infinity = "images/bg/bg background_infinity.png"
+    image bg background_internet = "images/bg/bg background_internet.png"
+    image bg background_singularity = "images/bg/bg background_singularity.png"
+    image bg background_street = "images/bg/bg background_street.png"
+    image bg best_ending = "images/bg/bg best_ending.png"
+    image bg hallway = "images/bg/bg bg bg hallway.png"
+    image bg house = "images/bg/bg bg bg house.png"
+    image bg snowbridge = "images/bg/bg bg bg snowbridge.png"
+    image bg ending_aiDestroyed = "images/bg/bg ending_aiDestroyed.png"
+    image bg ending_bad = "images/bg/bg ending_bad.png"
+    image bg ending_carCrush = "images/bg/bg ending_carCrush.png"
+    image bg good_ending = "images/bg/bg good_ending.png"
+    image bg outcome_civilUnrest = "images/bg/bg outcome_civilUnrest.png"
+    image bg outcome_dataCorruption = "images/bg/bg outcome_dataCorruption.png"
+    image bg outcome_financialCrisis = "images/bg/bg outcome_financialCrisis.png"
+    image bg outcome_outage = "images/bg/bg outcome_outage.png"
+    image bg outcome_riots = "images/bg/bg outcome_riots.png"
+    image bg outcome_virus = "images/bg/bg outcome_virus.png"
+    image bg outcome_war = "images/bg/bg outcome_war.png"
+    image bg police_ending = "images/bg/bg police_ending.png"
+    image bg worst_ending = "images/bg/bg worst_ending.png"
+    image bg ai_creates_malware = "images/bg/bg ai_creates_malware.png"
+    image bg ai_demonstration = "images/bg/bg ai_demonstration.png"
+    image bg attack_corruption = "images/bg/bg attack_corruption.png"
+    image bg attack_criticalInfrastructure = "images/bg/bg attack_criticalInfrastructure.png"
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

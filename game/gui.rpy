@@ -55,19 +55,19 @@ define gui.interface_text_color = u'#404040'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "fonts/Mali/Mali-Regular.ttf"
+define gui.text_font = "fonts/Roboto/Roboto-Regular.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "fonts/Mali/Mali-Regular.ttf"
+define gui.name_text_font = "fonts/Roboto/Roboto-Regular.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "fonts/Mali/Mali-Regular.ttf"
+define gui.interface_text_font = "fonts/Roboto/Roboto-Regular.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 36
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = 38
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 33
