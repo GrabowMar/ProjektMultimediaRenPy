@@ -1,13 +1,12 @@
 ﻿label start:
-    # play music 'audio/ambience/birds.wav'
-    scene bg hallway
+    play music 'audio/ambience/mainTheme.mp3'
+    scene bg background_street
     "This is a showcase of the Ren'Py features that I frequently find myself using."
+    show alex laugh
+    alex "Hello!"
 
-    show vivian
-    vivian "Hello!"
-
-    show vivian laugh
-    vivian "You are funny."
+    show alex neutralDown
+    alex "You are funny."
 
     show vivian neutralAway blush
     vivian "I can't believe I'm saying this but..."

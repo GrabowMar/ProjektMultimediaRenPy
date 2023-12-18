@@ -144,6 +144,55 @@ init:
 
         attribute_function Picker(expressions)
 
+
+    define alex = Character("Alex")
+    ## character sprites
+    define expressions = [
+    "neutral eyes_center_blink brows_neutral mouth_neutral",
+    "smile eyes_center_blink brows_neutral mouth_smile",
+    "neutralAway eyes_away_blink brows_neutral mouth_neutral",
+    "neutralDown eyes_down_blink brows_neutral mouth_neutral",
+    "laugh eyes_laugh brows_raised mouth_laugh",
+    "sadDown eyes_down_blink brows_worried mouth_pout"
+    ]
+
+    # blink
+    image alex_eyes_center_blink = DynamicBlink(
+        "alex_eyes_center",
+        "alex_eyes_closed"
+        )
+
+    image alex_eyes_down_blink = DynamicBlink(
+        "alex_eyes_down",
+        "alex_eyes_closed"
+        )
+
+    image alex_eyes_away_blink = DynamicBlink(
+        "alex_eyes_away",
+        "alex_eyes_closed"
+        )
+
+    layeredimage alex:
+        always "alex_base"
+
+        attribute blush
+        attribute tears
+
+        group eyes auto prefix "eyes"
+        group brows auto prefix "brows"
+        group mouth auto prefix "mouth"
+
+        group expressions:
+            attribute neutral default null
+            attribute smile null
+            attribute neutralAway null
+            attribute neutralDown null
+            attribute laugh null
+            attribute sadDown null
+
+        attribute_function Picker(expressions)    
+
+
     # for demo purpose, let's introduce vivian's evil twin
     layeredimage vivian2:
         always 'vivian_base'

@@ -1,0 +1,237 @@
+gui.rpy
+gui.rpyc
+options.rpy
+options.rpyc
+screens.rpy
+screens.rpyc
+script.rpy
+script.rpyc
+audio\ambience\mainTheme.mp3
+audio\sfx\button_click.wav
+cache\bytecode-39.rpyb
+cache\py3analysis.rpyb
+cache\screens.rpyb
+cache\shaders.txt
+fonts\icomoon\Read Me.txt
+fonts\icomoon\demo.html
+fonts\icomoon\selection.json
+fonts\icomoon\style.css
+fonts\icomoon\demo-files\demo.css
+fonts\icomoon\demo-files\demo.js
+fonts\icomoon\fonts\icomoon.eot
+fonts\icomoon\fonts\icomoon.svg
+fonts\icomoon\fonts\icomoon.ttf
+fonts\icomoon\fonts\icomoon.woff
+fonts\Mali\Mali-Bold.ttf
+fonts\Mali\Mali-BoldItalic.ttf
+fonts\Mali\Mali-Italic.ttf
+fonts\Mali\Mali-Regular.ttf
+fonts\Mali\OFL.txt
+gui\frame.png
+gui\game_menu.png
+gui\main_menu.png
+gui\namebox.png
+gui\notify.png
+gui\nvl.png
+gui\skip.png
+gui\textbox.png
+gui\window_icon.png
+gui\bar\bottom.png
+gui\bar\left.png
+gui\bar\right.png
+gui\bar\top.png
+gui\button\check_foreground.png
+gui\button\check_selected_foreground.png
+gui\button\choice_hover_background.png
+gui\button\choice_idle_background.png
+gui\button\hover_background.png
+gui\button\idle_background.png
+gui\button\quick_hover_background.png
+gui\button\quick_idle_background.png
+gui\button\radio_foreground.png
+gui\button\radio_selected_foreground.png
+gui\button\slot_hover_background.png
+gui\button\slot_idle_background.png
+gui\overlay\confirm.png
+gui\overlay\game_menu.png
+gui\overlay\main_menu.png
+gui\phone\nvl.png
+gui\phone\textbox.png
+gui\phone\bar\bottom.png
+gui\phone\bar\left.png
+gui\phone\bar\right.png
+gui\phone\bar\top.png
+gui\phone\button\check_foreground.png
+gui\phone\button\check_selected_foreground.png
+gui\phone\button\choice_hover_background.png
+gui\phone\button\choice_idle_background.png
+gui\phone\button\hover_background.png
+gui\phone\button\idle_background.png
+gui\phone\button\radio_foreground.png
+gui\phone\button\radio_selected_foreground.png
+gui\phone\button\slot_hover_background.png
+gui\phone\button\slot_idle_background.png
+gui\phone\overlay\game_menu.png
+gui\phone\overlay\main_menu.png
+gui\phone\scrollbar\horizontal_hover_bar.png
+gui\phone\scrollbar\horizontal_hover_thumb.png
+gui\phone\scrollbar\horizontal_idle_bar.png
+gui\phone\scrollbar\horizontal_idle_thumb.png
+gui\phone\scrollbar\vertical_hover_bar.png
+gui\phone\scrollbar\vertical_hover_thumb.png
+gui\phone\scrollbar\vertical_idle_bar.png
+gui\phone\scrollbar\vertical_idle_thumb.png
+gui\phone\slider\horizontal_hover_bar.png
+gui\phone\slider\horizontal_hover_thumb.png
+gui\phone\slider\horizontal_idle_bar.png
+gui\phone\slider\horizontal_idle_thumb.png
+gui\phone\slider\vertical_hover_bar.png
+gui\phone\slider\vertical_hover_thumb.png
+gui\phone\slider\vertical_idle_bar.png
+gui\phone\slider\vertical_idle_thumb.png
+gui\scrollbar\horizontal_hover_bar.png
+gui\scrollbar\horizontal_hover_thumb.png
+gui\scrollbar\horizontal_idle_bar.png
+gui\scrollbar\horizontal_idle_thumb.png
+gui\scrollbar\vertical_hover_bar.png
+gui\scrollbar\vertical_hover_thumb.png
+gui\scrollbar\vertical_idle_bar.png
+gui\scrollbar\vertical_idle_thumb.png
+gui\slider\horizontal_hover_bar.png
+gui\slider\horizontal_hover_thumb.png
+gui\slider\horizontal_idle_bar.png
+gui\slider\horizontal_idle_thumb.png
+gui\slider\vertical_hover_bar.png
+gui\slider\vertical_hover_thumb.png
+gui\slider\vertical_idle_bar.png
+gui\slider\vertical_idle_thumb.png
+images\bg\bg ai_creates_malware.png
+images\bg\bg ai_demonstration.png
+images\bg\bg attack_corruption.png
+images\bg\bg attack_criticalInfrastructure.png
+images\bg\bg attack_cybersecurity.png
+images\bg\bg attack_eliminationAI.png
+images\bg\bg attack_politicalInstability.png
+images\bg\bg attack_socialMedia.png
+images\bg\bg background_car.png
+images\bg\bg background_datacenter.png
+images\bg\bg background_desk.png
+images\bg\bg background_infinity.png
+images\bg\bg background_internet.png
+images\bg\bg background_singularity.png
+images\bg\bg background_street.png
+images\bg\bg best_ending.png
+images\bg\bg bg bg hallway.png
+images\bg\bg bg bg house.png
+images\bg\bg bg bg snowbridge.png
+images\bg\bg ending_aiDestroyed.png
+images\bg\bg ending_bad.png
+images\bg\bg ending_carCrush.png
+images\bg\bg good_ending.png
+images\bg\bg outcome_civilUnrest.png
+images\bg\bg outcome_dataCorruption.png
+images\bg\bg outcome_financialCrisis.png
+images\bg\bg outcome_outage.png
+images\bg\bg outcome_riots.png
+images\bg\bg outcome_virus.png
+images\bg\bg outcome_war.png
+images\bg\bg police_ending.png
+images\bg\bg worst_ending.png
+images\cg\paperplane\bg paperplane.png
+images\cg\paperplane\sprite paperplane.png
+images\cg\pool\ripple1.png
+images\cg\pool\ripple2.png
+images\cg\pool\sprite pool.png
+images\cg\pool\tile pool.png
+images\chara\aian\faces\GRRRRRR.png
+images\chara\aian\faces\POG.png
+images\chara\aian\faces\almostDead.png
+images\chara\aian\faces\confident.png
+images\chara\aian\faces\confused.png
+images\chara\aian\faces\crying.png
+images\chara\aian\faces\disgusted.png
+images\chara\aian\faces\dizzy.png
+images\chara\aian\faces\flirty.png
+images\chara\aian\faces\flushes.png
+images\chara\aian\faces\grossedOut.png
+images\chara\aian\faces\happyCrying.png
+images\chara\aian\faces\holUP.png
+images\chara\aian\faces\irritated.png
+images\chara\aian\faces\kawai.png
+images\chara\aian\faces\kissy.png
+images\chara\aian\faces\love.png
+images\chara\aian\faces\mimic.png
+images\chara\aian\faces\notConfident.png
+images\chara\aian\faces\omnomnom.png
+images\chara\aian\faces\pissedOff.png
+images\chara\aian\faces\readyForCarnage.png
+images\chara\aian\faces\realisation.png
+images\chara\aian\faces\scared.png
+images\chara\aian\faces\smug.png
+images\chara\aian\faces\stupidHappy.png
+images\chara\aian\faces\thinking.png
+images\chara\aian\faces\tongue.png
+images\chara\aian\faces\ughhhh.png
+images\chara\aian\faces\unsure.png
+images\chara\aian\faces\vicious.png
+images\chara\aian\window\background.png
+images\chara\aian\window\background_dead.png
+images\chara\alex\alex_base.png
+images\chara\alex\alex_blush.png
+images\chara\alex\alex_brows_angry.png
+images\chara\alex\alex_brows_neutral.png
+images\chara\alex\alex_brows_raised.png
+images\chara\alex\alex_brows_worried.png
+images\chara\alex\alex_eyes_away.png
+images\chara\alex\alex_eyes_center.png
+images\chara\alex\alex_eyes_closed.png
+images\chara\alex\alex_eyes_down.png
+images\chara\alex\alex_eyes_laugh.png
+images\chara\alex\alex_mouth_laugh.png
+images\chara\alex\alex_mouth_neutral.png
+images\chara\alex\alex_mouth_oh.png
+images\chara\alex\alex_mouth_pout.png
+images\chara\alex\alex_mouth_smile.png
+images\chara\alex\alex_tears.png
+images\chara\vivian\vivian_base.png
+images\chara\vivian\vivian_blush.png
+images\chara\vivian\vivian_brows_angry.png
+images\chara\vivian\vivian_brows_neutral.png
+images\chara\vivian\vivian_brows_raised.png
+images\chara\vivian\vivian_brows_worried.png
+images\chara\vivian\vivian_eyes_away.png
+images\chara\vivian\vivian_eyes_center.png
+images\chara\vivian\vivian_eyes_closed.png
+images\chara\vivian\vivian_eyes_down.png
+images\chara\vivian\vivian_eyes_laugh.png
+images\chara\vivian\vivian_mouth_laugh.png
+images\chara\vivian\vivian_mouth_neutral.png
+images\chara\vivian\vivian_mouth_oh.png
+images\chara\vivian\vivian_mouth_pout.png
+images\chara\vivian\vivian_mouth_smile.png
+images\chara\vivian\vivian_tears.png
+images\wipes\eye.png
+saves\_reload-2-LT1.save
+saves\auto-1-LT1.save
+saves\auto-2-LT1.save
+saves\auto-3-LT1.save
+saves\auto-4-LT1.save
+saves\auto-5-LT1.save
+saves\navigation.json
+saves\persistent
+scripts\atl.rpy
+scripts\atl.rpyc
+scripts\blink.rpy
+scripts\blink.rpyc
+scripts\ctc.rpy
+scripts\ctc.rpyc
+scripts\definitions.rpy
+scripts\definitions.rpyc
+scripts\expression_showcase_screen.rpy
+scripts\expression_showcase_screen.rpyc
+scripts\icons.rpy
+scripts\icons.rpyc
+scripts\parallax.rpy
+scripts\parallax.rpyc
+tl\None\common.rpym
+tl\None\common.rpymc
