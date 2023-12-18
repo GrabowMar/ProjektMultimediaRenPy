@@ -12,6 +12,10 @@
 init python:
     import re # regex for parsing file name
 
+
+
+
+
     # define italics and bold fonts
     # the arguments are: font file, boldness, italics
     config.font_replacement_map["fonts/Mali/Mali-Regular.ttf", True, False] = ("fonts/Mali/Mali-Bold.ttf", False, False)
@@ -197,9 +201,8 @@ init:
 
 
 
-
-    ## define aian
-    define aian = Character("Aian")
+    define aian_position = Position(xpos=0.5, ypos=0.65)  # adjust xpos and ypos as needed
+    define aian = Character('Aian')
     ## character sprites
     define aianExpressions = [
         "GRRRRRR GRRRRRR",

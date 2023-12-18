@@ -2,7 +2,7 @@
     play music 'audio/ambience/mainTheme.mp3'
     scene bg background_street
     "This is a showcase of the Ren'Py features that I frequently find myself using."
-    show aian happyCrying
+    show aian happyCrying at aian_position
     aian "Hello!"
 
     show alex neutralDown
