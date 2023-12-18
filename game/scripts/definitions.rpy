@@ -1,3 +1,14 @@
+# FILEPATH: /c:/Users/marci/Desktop/aaaaaaa/game/scripts/definitions.rpy
+
+# This script file contains various definitions and configurations for the game.
+# It includes the following:
+# - Font replacement map for italics and bold fonts
+# - Picker class for character sprites
+# - Day-night effects and corresponding tint matrices
+# - Programmatically applying effects to background and character sprites based on time of day
+# - Definition of characters and their layered images
+# - Miscellaneous images such as parallax backgrounds and effects pool
+
 init python:
     import re # regex for parsing file name
 
@@ -147,14 +158,6 @@ init:
 
     define alex = Character("Alex")
     ## character sprites
-    define expressions = [
-    "neutral eyes_center_blink brows_neutral mouth_neutral",
-    "smile eyes_center_blink brows_neutral mouth_smile",
-    "neutralAway eyes_away_blink brows_neutral mouth_neutral",
-    "neutralDown eyes_down_blink brows_neutral mouth_neutral",
-    "laugh eyes_laugh brows_raised mouth_laugh",
-    "sadDown eyes_down_blink brows_worried mouth_pout"
-    ]
 
     # blink
     image alex_eyes_center_blink = DynamicBlink(
@@ -193,15 +196,86 @@ init:
         attribute_function Picker(expressions)    
 
 
-    # for demo purpose, let's introduce vivian's evil twin
-    layeredimage vivian2:
-        always 'vivian_base'
-        always 'vivian_eyes_center_blink'
-        always 'vivian_brows_neutral'
-        always 'vivian_mouth_neutral'
 
-    # uncomment this to use vivian on the side
-    # image side vivian = LayeredImageProxy("vivian")
+
+    ## define aian
+    define aian = Character("Aian")
+    ## character sprites
+    define aianExpressions = [
+        "GRRRRRR GRRRRRR",
+        "happyCrying happyCrying",
+        "holUP holUP",
+        "irritated irritated",
+        "kawai kawai",
+        "kissy kissy",
+        "love love",
+        "dead dead",
+        "disgusted disgusted",
+        "dizzy dizzy",
+        "flirty flirty",
+        "flushes flushes",
+        "grossedOut grossedOut",
+        "mimic mimic",
+        "notConfident notConfident",
+        "omnomnom omnomnom",
+        "pissedOff pissedOff",
+        "POG POG",
+        "readyForCarnage readyForCarnage",
+        "realisation realisation",
+        "scared scared",
+        "smug smug",
+        "stupidHappy stupidHappy",
+        "thinking thinking",
+        "tongue tongue",
+        "ughhhh ughhhh",
+        "unsure unsure",
+        "vicious vicious",
+        "almostDead almostDead",
+
+        "confident confident",
+        "confused confused",
+        "crying crying"
+    ]
+    
+    layeredimage aian:
+        always "aian_base"
+        group expressions:
+            attribute GRRRRRR default "aian_GRRRRRR"
+            attribute happyCrying "aian_happyCrying"
+            attribute holUP "aian_holUP"
+            attribute irritated "aian_irritated"
+            attribute kawai "aian_kawai"
+            attribute kissy "aian_kissy"
+            attribute love "aian_love"
+            attribute dead "aian_dead"
+            attribute disgusted "aian_disgusted"
+            attribute dizzy "aian_dizzy"
+            attribute flirty "aian_flirty"
+            attribute flushes "aian_flushes"
+            attribute grossedOut "aian_grossedOut"
+            attribute mimic "aian_mimic"
+            attribute notConfident "aian_notConfident"
+            attribute omnomnom "aian_omnomnom"
+            attribute pissedOff "aian_pissedOff"
+            attribute POG "aian_POG"
+            attribute readyForCarnage "aian_readyForCarnage"
+            attribute realisation "aian_realisation"
+            attribute scared "aian_scared"
+            attribute smug "aian_smug"
+            attribute stupidHappy "aian_stupidHappy"
+            attribute thinking "aian_thinking"
+            attribute tongue "aian_tongue"
+            attribute ughhhh "aian_ughhhh"
+            attribute unsure "aian_unsure"
+            attribute vicious "aian_vicious"
+            attribute almostDead "aian_almostDead"
+            attribute confident "aian_confident"
+            attribute confused "aian_confused"
+            attribute crying "aian_crying"
+            
+        attribute_function Picker(aianExpressions)
+
+
 
     ## miscellaneous images
     define parallax_bg_size = (2200, 1237) # needs to be bigger than the screen size (1920, 1080)

@@ -2,16 +2,16 @@
     play music 'audio/ambience/mainTheme.mp3'
     scene bg background_street
     "This is a showcase of the Ren'Py features that I frequently find myself using."
-    show alex laugh
-    alex "Hello!"
+    show aian happyCrying
+    aian "Hello!"
 
     show alex neutralDown
     alex "You are funny."
 
-    show vivian neutralAway blush
+    show alex neutralAway blush
     vivian "I can't believe I'm saying this but..."
 
-    show vivian neutralDown -blush
+    show alex neutralDown -blush
     vivian "Uhhh... I don't know how to tell you this but..."
 
     "You can configure more expressions by mixing and matching eyes, brows, and mouth on the expression showcase screen."
@@ -24,7 +24,7 @@
     $ time_of_day = DUSK
     vivian "I can't believe it's already getting dark. Let's go somewhere else before it gets dark."
 
-    $ time_of_day = NIGHT
+    $ time_of_day = NIGHTRR
     scene bg house with dissolve
     vivian "Now it's dark and we are in the woods. Spooky!"
 
