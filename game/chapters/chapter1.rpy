@@ -8,26 +8,27 @@ label chapter1:
     scene bg attack_socialMedia
     
     # Introduction
-    "Another sunny day at AI Corp. I'm excited to start my new job as a data scientist. I've been looking forward to this for a long time. I'm finally here, and I'm ready to make a difference."
-    "But before all that I need to check my e-mail"
-    "Good I have my name as my e-mail address, otherwise I would have forgotten it because of all the thing happening here since week ago."
+    "Another sunny day at genAIcorp. Not the best job in the world, but it pays the bills. I'm a QA junior tester, and I work on some kind of AI project. I'm not the best at my job, but I'm not the worst either."
+    "I'm not sure if I like my job, but it help me to achive my lifetime goal of not working myself to death while still being able top enjoy luxuries such as not starving to death."
+    "But enough of that I need to check my e-mail."
+    "Good I have my name as my e-mail address, otherwise I would have forgotten it because of all the things happening here since last week."
     $ player_name = renpy.input("\"To login enter your name:\"").strip()
     $ player_name = player_name if player_name else "Player"
-    "\"Hello, [player_name]! You have 1 new message from your boss, Alex.\""
-    player "I wonder what mr. Prick wants, I better check it out after I meet up with Vivian."
-    "I open the e-mail and read it."
-    alex "\"Hello [player_name], I need you to come to my office ASAP. 74th floor is furious, They will skin us alive if we won't act NOW!!! \""
     define player = Character('[player_name]', who_color="#1100ff")
-    player "Huh, seems important"
+    "\"Hello, [player_name]! You have 1 new message from your boss, Alex.\""
+    player "I wonder what mr. Prick wants, I better do whatever he wants now after I meet up with Vivian, I wouldn't want to upset only person that I can call a friend here."
+    "{i}I open the e-mail and read it.{/i}"
+    alex "\"Hello [player_name], I need you to come to my office ASAP. 74th floor is furious, They will skin us alive if we won't act NOW!!! \""
+    player "Perfect, management is pissed off again, I wonder what happened this time, it really seems important"
     player "I should check it out, but I also promised Vivian to meet up with her in the break room after I'm done with my e-mails."
 
 
 
     # Choices
     menu:
-        "Head to Alex's lab.":
+        "Head to Alex's lab whatever he wants, it's probably important.":
             jump alex_lab
-        "Catch up with Vivian in the break room.":
+        "Catch up with Vivian in the break room. You can always go to Alex later.":
             jump break_room
 
 label alex_lab:
