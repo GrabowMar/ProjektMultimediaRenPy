@@ -161,6 +161,45 @@ init:
 
         attribute_function Picker(expressions)
 
+    define sam = Character("Sam")
+    ## character sprites
+
+    # blink
+    image sam_eyes_center_blink = DynamicBlink(
+        "sam_eyes_center",
+        "sam_eyes_closed"
+        )
+
+    image sam_eyes_down_blink = DynamicBlink(
+        "sam_eyes_down",
+        "sam_eyes_closed"
+        )
+
+    image sam_eyes_away_blink = DynamicBlink(
+        "sam_eyes_away",
+        "sam_eyes_closed"
+        )
+
+    layeredimage sam:
+        always "sam_base"
+
+        attribute blush
+        attribute tears
+
+        group eyes auto prefix "eyes"
+        group brows auto prefix "brows"
+        group mouth auto prefix "mouth"
+
+        group expressions:
+            attribute neutral default null
+            attribute smile null
+            attribute neutralAway null
+            attribute neutralDown null
+            attribute laugh null
+            attribute sadDown null
+
+        attribute_function Picker(expressions)
+
 
     define alex = Character("Alex")
     ## character sprites
@@ -326,6 +365,7 @@ init:
     image bg ai_demonstration = "images/bg/bg ai_demonstration.png"
     image bg attack_corruption = "images/bg/bg attack_corruption.png"
     image bg attack_criticalInfrastructure = "images/bg/bg attack_criticalInfrastructure.png"
+    image bg sam_office = "images/bg/bg sam_office.png"
 
 
 

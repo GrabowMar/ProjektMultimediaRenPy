@@ -51,4 +51,5 @@ init 800 python:
     'vivian': 'back',
     'alex': 'back',
     'aian': 'back',
+    'sam': 'back',
     }

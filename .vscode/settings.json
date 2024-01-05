@@ -169,5 +169,35 @@
                 }
             }
         ]
-    }
+    },
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "db.ue.poznan.pl",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "UEP",
+            "username": "marcin_grabowski",
+            "password": "autobus",
+            "database": "omega"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "db.ue.poznan.pl",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "marcin",
+            "database": "grabowski_edu",
+            "username": "marcin_grabowski",
+            "askForPassword": true
+        }
+    ]
 }
