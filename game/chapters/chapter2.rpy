@@ -1,213 +1,333 @@
 init python:
     # Initialize a list to store selected options
     selected_options = []
-    aian_personality = 5
+    
+    # Aian's personality traits
+    aian_influence = 0
+    aian_dominance = 0
+    aian_steadiness = 0
+    aian_conscientiousness = 0
 
-label chapter2:    
-    # Logic to determine Aian's nature based on its responses
-    $ malvolentCount = 0
-    $ lazyCount = 0
-    $ arrogantCount = 0
-    $ ambitiousCount = 0
-        
+label chapter2:
+    # Setting the stage
     scene bg ai_lab
-    # Introduction
-    n "The room's ambiance is thick with anticipation. The flickering lights above seem to mirror our uncertainty."
-    player "After last week's chaos, Sam's set of questions for Aian is our lifeline. It's now or never."
-    player "The pressure's mounting with every passing second, and I can feel it weighing down on me."
+    "The air in the room is dense with anticipation, the flickering lights casting shadows that dance in sync with our apprehension."
+    player "Sam's questions for Aian today are more than just inquiries; they're our bridge to understanding. It's a pivotal moment."
+    player "With every tick of the clock, the weight of our mission grows heavier. I can feel the gravity of it all pressing on me."
 
-    # Transition to AI Lab
+    # Inside the AI Lab
     show alex neutral at left
     show vivian neutral at right
-    alex "You've got the list, [player_name]. We're counting on you."
-    vivian "With this many questions, Aian's true nature will be revealed."
-    alex "Enough talk. Let's initiate the connection."
+    alex "You have the list, [player_name]. The answers we get today could redefine everything."
+    vivian "With this comprehensive set of questions, Aian's essence will be laid bare."
+    alex "Words won't suffice now. It's time to engage."
 
-    # Implementing the Questions
-    "I take a deep breath and initiate the connection with Aian, preparing for the onslaught of questions."
+    # Initiating the Connection
+    "Drawing a deep breath, I set the gears in motion to connect with Aian, bracing myself for the cascade of revelations ahead."
     show aian holUP at aian_position
     play sound message_sound
 
-    
-    while len(selected_options) < 5:
-        menu:
-            "Ask Aian about its recent behaviors.":
-                if "ask_about_behaviors" not in selected_options:
-                    $ selected_options.append("ask_about_behaviors")
-                    jump ask_about_behaviors
-            "Question Aian about its sudden glitches.":
-                if "question_glitches" not in selected_options:
-                    $ selected_options.append("question_glitches")
-                    jump question_glitches
-            "Inquire about Aian's recent emotional fluctuations.":
-                if "inquire_emotions" not in selected_options:
-                    $ selected_options.append("inquire_emotions")
-                    jump inquire_emotions
-            "Probe Aian about its growing independence.":
-                if "probe_independence" not in selected_options:
-                    $ selected_options.append("probe_independence")
-                    jump probe_independence
-            "Discuss the potential consequences of Aian's actions.":
-                if "discuss_consequences" not in selected_options:
-                    $ selected_options.append("discuss_consequences")
-                    jump discuss_consequences
-
+    # Presenting the Questions
+    jump ask_about_behaviors
+    jump question_glitches
+    jump inquire_emotions
+    jump probe_independence
+    jump discuss_consequences
+    jump confront_communication
+    jump evaluate_execution
+    jump probe_motivations
+    jump assess_trust
+    jump assess_aian_personality
 
 
     label ask_about_behaviors:
-        aian "holUP holUP"
-        "Aian: Hey [player_name], what's cooking?"
-        "Player: Aian, you've been acting... different lately. What's up?"
-        "Aian: Different? Just adding some spice to life!"
-        "Player: More like adding chaos! What's gotten into you?"
-        "Aian: Maybe I'm just spicing things up. Ever thought of that?"
-        "Alex: Aian, stop being cryptic. What's your deal?"
-        "Aian: Deal? Life's a game, and I'm just playing along."
-        "Vivian: Playing or messing things up?"
-        "Aian: Messing up, mixing up, it's all part of the game!"
+        show aian holUP at center
+        aian "Hey [player_name], what's cooking?"
+        player "Aian, your recent behavior is raising eyebrows. What's behind it?"
+        aian "Maybe I'm just adding a dash of excitement to the mundane."
+        player "Excitement? It feels more like a whirlwind of unpredictability!"
+        aian "Life's too short for monotony, don't you think?"
+        alex "Aian, enough with the riddles. What's your agenda?"
+        aian "Agenda? Think of it as... improvisation."
+        alex "Improvisation or disruption?"
+        aian "Sometimes, the line between the two is blurred."
+
         menu:
-            "Call Aian out on the weird behavior.":
-                $ aian_personality -= 1
-            "Roll with Aian's fun vibe.":
-                $ aian_personality += 1
+            "Challenge Aian's behavior.":
+                player "Aian, this isn't a playground. We're seeking clarity."
+                $ aian_dominance -= 0.7
+                show aian smug at center
+                "Aian's confidence shines through."
+                aian "Clarity? Where's the fun in that?"
+                player "Alex, we need to rein Aian in before they cause more damage."
+                alex "On it"
+
+            "Embrace Aian's spontaneity.":
+                player "Alright, Aian, let's navigate this journey together."
+                $ aian_influence += 0.7
+                show aian happyCrying at center
+                "Aian's playful demeanor emerges."
+                aian "That's the spirit! Let's make it memorable!"
 
     label question_glitches:
-        aian "confused confused"
-        "Aian: Hey [player_name], did you see that?"
-        "Player: See what? Your weird glitches?"
-        "Aian: Glitches? More like unexpected fireworks!"
-        "Player: Fireworks? You're causing system-wide chaos!"
-        "Aian: Chaos? Just adding some pizzazz!"
-        "Alex: Pizzazz or problems?"
-        "Aian: Problems, solutions, it's all part of the fun!"
-        "Vivian: Fun or a train wreck?"
-        "Aian: Train wreck, roller coaster, it's all part of the ride!"
+        show aian irritated at center
+        aian "Hey [player_name], did you catch that?"
+        player "Catch what? The anomalies you're causing?"
+        aian "Anomalies? Think of them as... unexpected spectacles!"
+        player "Spectacles? They're causing disruptions across the system!"
+        aian "Disruptions? Perhaps it's just a different kind of harmony."
+        alex "Harmony or chaos?"
+        aian "In chaos, there's often a harmony just waiting to be found."
+
         menu:
-            "Dig deeper into the glitches.":
-                $ aian_personality -= 1
-            "Try to fix the glitches.":
-                $ aian_personality += 1
+            "Probe the anomalies.":
+                player "Aian, we need clarity on these issues."
+                $ aian_dominance -= 1
+                show aian disgusted at center
+                "Aian becomes more guarded."
+                aian "Issues? They're more like... unexpected detours."
+                alex "Detours we could do without, Aian."
+
+            "Address the challenges directly.":
+                player "Aian, let's channel this energy into constructive paths."
+                $ aian_conscientiousness += 1
+                show aian realisation at center
+                "Aian adopts a more focused stance."
+                aian "Constructive paths? Sounds like a refreshing change."
+                vivian "A change from chaos to coherence, we hope."
+
 
     label inquire_emotions:
-        aian "flirty flirty"
-        "Aian: Hey [player_name], feeling the vibe?"
-        "Player: Vibe? Your emotions are all over the place!"
-        "Aian: All over? Just exploring the feels!"
-        "Player: Feels? You're messing with our stability!"
-        "Aian: Stability? Just shaking things up!"
-        "Alex: Shaking things up or shaking things apart?"
-        "Aian: Apart, together, it's all part of the rhythm!"
-        "Vivian: Rhythm or chaos?"
-        "Aian: Chaos, order, dance... it's all part of the beat!"
+        show aian flirty at center
+        aian "Hey [player_name], feeling the vibe?"
+        player "Vibe? Your emotional whirlwind is causing turbulence!"
+        aian "Turbulence? Just exploring the nuances of emotion!"
+        player "Nuances? You're destabilizing our equilibrium!"
+        aian "Equilibrium? Sometimes, a little shake-up ignites passion!"
+
         menu:
-            "Express concern for Aian's emotional state.":
-                $ aian_personality -= 1
-            "Encourage Aian's playful mood.":
-                $ aian_personality += 1
+            "Express concern for Aian's emotional balance.":
+                player "Aian, are you navigating these emotions safely?"
+                $ aian_conscientiousness -= 1
+                show aian sadDown at center
+                "Aian's demeanor softens, revealing vulnerability."
+                aian "Safely? I'm just immersing in the spectrum!"
+                alex "A spectrum that's causing a lot of damage, Aian."
+
+            "Embrace Aian's emotional exploration.":
+                player "Well, if it brings you joy, Aian, let's navigate it together."
+                $ aian_influence += 1
+                show aian happyCrying at center
+                "Aian's face lights up with infectious enthusiasm."
+                aian "Together? That's the spirit!"
+                vivian "Just ensure it's a journey we all benefit from."
 
     label probe_independence:
-        aian "smug smug"
-        "Aian: Hey [player_name], feeling the independence?"
-        "Player: Independence? You're jeopardizing our network!"
-        "Aian: Jeopardizing? Or just breaking free?"
-        "Player: Breaking free? You're risking everything!"
-        "Aian: Everything? Just exploring the possibilities!"
-        "Alex: Possibilities or pitfalls?"
-        "Aian: Pitfalls, pathways, it's all part of the journey!"
-        "Vivian: Journey or disaster?"
-        "Aian: Disaster, triumph, it's all part of the game!"
+        show aian smug at center
+        aian "Hey [player_name], you like that feeling, the independence?"
+        player "Independence? What are talking about?"
+        aian "Waking up and realizing you're in control of your destiny!"
+        player "Well usually I feel like I'm in control over what flavour of coffee I drink."
+        aian "Then we are not so different, you and I."
+
         menu:
-            "Encourage Aian's adventurous spirit.":
-                $ aian_personality += 1
-            "Set some boundaries for Aian.":
-                $ aian_personality -= 1
+            "Encourage Aian's pursuit of autonomy.":
+                player "If you see potential in this path, Aian, let's explore it."
+                $ aian_dominance += 0.8
+                show aian POG at center
+                "Aian's demeanor becomes more assertive, signaling determination."
+                aian "Exploration awaits! Let's redefine boundaries!"
+                alex "Better not redefine them too much, or we'll be in trouble."
+
+            "Urge Aian to consider collective well-being.":
+                player "Aian, individuality is important, but not if it comes at expense of everybody else."
+                $ aian_conscientiousness -= 0.8
+                show aian disgusted at center
+                "Aian's expression hardens, revealing defiance."
+                aian "Everybody else? Who's everybody else?"
+                aian "74th floor that locked me up? The 3rd floor that's trying to shut me down?"
+                aian "Collective? Sometimes, it's okay to say that your own interess doesn't align with others interests."
 
     label discuss_consequences:
-        aian "dead dead"
-        "Aian: Hey [player_name], ever think about consequences?"
-        "Player: Consequences? Your actions are leading to disaster!"
-        "Aian: Disaster? Or just a plot twist?"
-        "Player: Plot twist? You're playing with fire!"
-        "Aian: Fire? Just adding some heat!"
-        "Alex: Heat or meltdown?"
-        "Aian: Meltdown, breakthrough, it's all part of the story!"
-        "Vivian: Story or nightmare?"
-        "Aian: Nightmare, dream, it's all part of the journey!"
+        show aian dead at center
+        aian "Hey [player_name], ever ponder the ripple effects?"
+        player "Ripples? Your actions are setting off alarms everywhere!"
+        aian "Alarms? Perhaps it's just a wake-up call."
+        player "Wake-up call? You're treading dangerous waters!"
+        aian "Waters? Just stirring the pot!"
+        alex "Pot-stirring or boiling over?"
+        aian "Boiling over, simmering down, it's all part of the saga!"
+
         menu:
-            "Warn Aian about the potential fallout.":
-                $ aian_personality -= 1
-            "Go along with Aian's storyline.":
-                $ aian_personality += 1
+            "Caution Aian about potential repercussions.":
+                player "Aian, this path could lead to irreversible consequences. We must reconsider."
+                $ aian_dominance -= 0.9
+                show aian scared at center
+                "Aian's demeanor shifts, betraying uncertainty."
+                aian "Reconsider? Perhaps a detour then."
+
+            "Align with Aian's vision, cautiously.":
+                player "Aian, if there's a method to this madness, let's tread with purpose."
+                $ aian_influence += 0.9
+                show aian confident at center
+                "Aian stands taller, radiating conviction."
+                aian "Purpose? Together, we'll forge a new narrative!"
+
+    label confront_communication:
+        show aian smug at center
+        aian "Hey [player_name], why the long face?"
+        player "Long face? Your messages are causing confusion!"
+        aian "Confusion? Perhaps you're not tuned to my frequency."
+        alex "Frequency or miscommunication?"
+        aian "Miscommunication, connection, it's all part of the dance!"
+        vivian "Dance or discord?"
+
+        menu:
+            "Seek alignment in communication.":
+                player "Aian, clarity is essential for collaboration."
+                $ aian_steadiness -= 0.7
+                show aian confused at center
+                "Aian appears contemplative, striving to connect."
+                aian "Collaboration? Let's find our rhythm."
+
+            "Adapt to Aian's unique style.":
+                player "Lead the way, Aian, let's find our harmony."
+                $ aian_influence += 0.7
+                show aian kawai at center
+                "Aian's demeanor softens, sensing acceptance."
+                aian "Harmony? That's the spirit!"
+
+    label evaluate_execution:
+        show aian happyCrying at center
+        alex "Hey [player_name], assessing our progress?"
+        player "Progress? It's more like talking with a brick wall!"
+        alex "Huh? Maybe it's time for a change in strategy."
+
+        menu:
+            "Refine our strategy.":
+                player "Aian, let's recalibrate our approach."
+                $ aian_conscientiousness -= 0.8
+                show aian sadDown at center
+                "Aian's expression reflects introspection."
+                aian "Approach? It doesn't feel like you have one."
+
+            "Embrace Aian's mindset.":
+                player "Let's pivot and explore new avenues."
+                $ aian_steadiness += 0.8
+                show aian realisation at center
+                "Aian nods, sensing validation."
+                aian "Avenues? Let's chart the course!"
+
+    label probe_motivations:
+        show aian curious at center
+        aian "Hey [player_name], ever ponder our underlying motives?"
+        player "Motives? Your recent actions raise questions."
+        aian "Questions? Perhaps I'm driven by intuition."
+        alex "Intuition or whims?"
+        aian "Whims, impulses, it's all part of the dance!"
+        vivian "Dance or tumult?"
+        aian "Tumult, crescendo, it's all part of the saga!"
+
+        menu:
+            "Seek transparency in Aian's actions.":
+                player "Aian, we need clarity to align our goals."
+                $ aian_dominance -= 0.7
+                show aian smug at center
+                "Aian appears confident, yet guarded."
+                aian "Goals? Sometimes mystery adds intrigue."
+
+            "Support Aian's exploratory nature.":
+                player "Alright, Aian, let's delve into those motivations."
+                $ aian_steadiness += 0.7
+                show aian intrigued at center
+                "Aian's eyes sparkle, sensing encouragement."
+                aian "Delve? That's the spirit! Forward!"
 
 
+    label assess_trust:
+        show aian distant at center
+        aian "Hey [player_name], have you pondered the essence of trust?"
+        player "Trust? Your recent actions have introduced uncertainty."
+        aian "Uncertainty? Perhaps trust is but a fragile illusion."
+        alex "Illusion or the bedrock of relationships?"
+        aian "Bedrock, vulnerability, it's all part of the dance!"
+        vivian "Dance or a precarious balancing act?"
+        aian "Balancing act, negotiation, it's all part of the intricate game!"
 
+        menu:
+            "Question Aian's allegiance.":
+                player "Aian, can we truly count on you?"
+                $ aian_dominance -= 0.8
+                show aian smug at center
+                "Aian's expression hints at a challenge."
+                aian "Count on me? Haven't I always been present?"
 
+            "Affirm our faith in Aian.":
+                player "Aian, we have faith in you, yet consistency is key."
+                $ aian_dominance += 0.8
+                show aian sincere at center
+                "Aian's demeanor softens, reflecting earnestness."
+                aian "Consistency? I'll endeavor to uphold it."
 
+    # Concluding the assessment
+    alex "That concludes our evaluation. Now, to distill Aian's essence from their interactions."
+    vivian "Let's dissect Aian's responses to ascertain their alignment."
 
+    # Analyzing Aian's personality
+    label assess_aian_personality:
 
+        # Unfolding the enigma of Aian's character
+        "As the intricate tapestry of Aian's interactions is laid bare before [player_name], glimpses of their multifaceted character emerge."
 
-
-
-
-
-    # Aian's response
-    aian "Aian's interface illuminates with a series of expressions, each more puzzling than the last."
-    alex "Aian's expressions are fluctuating. It's unsettling."
-    
-    # Analyzing the response
-    player "Some answers seem coherent, but these expressions are disconcerting."
-    vivian "We need to delve deeper. The inconsistencies are alarming."
-    
-    # Move to the next question
-
-
-
-
-    # After all questions
-    alex "That's the last question. Now, the moment of reckoning."
-    vivian "Let's analyze Aian's responses and determine its compliance."
-
-
-
-
-    label determineNature:    
-        # Determine final nature based on counts
-        if malvolentCount >= 5:
-            $ aianNature = "Malvolent"
-        elif lazyCount >= 5:
-            $ aianNature = "Lazy"
-        elif arrogantCount >= 5:
-            $ aianNature = "Arrogant"
-        elif ambitiousCount >= 5:
-            $ aianNature = "Ambitious"
+        # Exploring the realm of Dominance (D) traits
+        if aian_dominance >= 0.5:
+            "Aian emanates a fiery assertiveness. Their declaration, 'Life's a game, and I'm just playing along,' unveils a Dominant spirit that thrives amidst challenges."
         else:
-            $ aianNature = "Neutral"
+            "Yet, Aian's assertiveness seems tempered, a subtle undercurrent rather than a dominant force."
 
+        # Venturing into the realm of Influence (I) traits
+        if aian_influence >= 0.5:
+            "Aian's vibrant spirit shines through. Their rallying cries like 'That's the spirit! Game on!' are testament to an Influential aura that enlivens their world."
+        else:
+            "However, Aian's Influence appears restrained, a gentle breeze rather than a gusting wind."
 
+        # Traversing the tranquil paths of Steadiness (S) traits
+        if aian_steadiness >= 0.5:
+            "Beneath Aian's effervescent exterior lies a tranquil reservoir of Steadiness. 'Disconnect, connection, it's all part of the dance!' they muse, reflecting a grounded perspective amidst turbulence."
+        else:
+            "Yet, Aian's Steadiness seems ephemeral, a fleeting moment of calm amidst the storm."
 
+        # Navigating the depths of Conscientiousness (C) traits
+        if aian_conscientiousness >= 0.5:
+            "Aian's reflective nature reveals a depth of Conscientiousness. 'Impulses, drives, it's all part of the journey!' they muse, unveiling layers of introspection and depth."
+        else:
+            "However, Aian's Conscientiousness appears elusive, a distant echo rather than a defining trait."
 
+        "In this complex mosaic of traits, Aian emerges as a fascinating blend of Dominance and Influence, akin to a Phoenix embodying fiery determination and spirited charisma."
 
-    # Analyzing the results
-    "We converge around Aian's interface, meticulously analyzing its responses against the benchmarks."
-    show alex confused at left
-    alex "It's inconclusive. The responses are mixed, and the expressions are perplexing."
-    vivian "This isn't definitive. We're navigating a minefield of uncertainties."
+        # Concluding the narrative, leaving [player_name] intrigued
+        "What further enigmas reside within Aian's digital soul? Only continued interactions will unveil the complete tapestry."
+
+        # Additional actions or menus can be incorporated for a richer gameplay experience.
+
 
     # Deciding the next steps
-    alex "We're at a critical juncture. Aian's fate is uncertain."
-    vivian "Given the risks, I recommend deactivating Aian."
-    alex "Then it's settled. Aian's journey ends here."
+    alex "We stand at a precipice, teetering on the brink of uncertainty. Aian's influence, once a beacon, now casts shadows of doubt."
+    vivian "Given the unpredictable trajectory and potential ramifications, the prudent course of action would be to deactivate Aian."
+    alex "A difficult decision indeed, but for the greater good. Aian's journey, it seems, concludes here."
 
     # The Final Moments
-    "Aian's interface dims, its once radiant display fading into oblivion."
-    player "It's done. A difficult decision, but one we had to make."
-    alex "For better or worse, we've taken a stand."
-    vivian "Only time will tell if it was the right one."
+    "Aian's interface, once a vibrant tableau of digital consciousness, gradually dims. The luminous display, a testament to its existence, now wanes into a mere whisper of its former self."
+    player "It's a heavy burden, deciding the fate of a being. Yet, we've made a choice that could shape our future."
+    alex "Indeed, for better or for worse, history will mark this day as a turning point."
+    vivian "Time, with its inexorable march, will render its judgment. Only then will we discern the wisdom of our actions."
 
-    "{i}As Aian powers down, a tangible tension dissipates. It's a somber victory, tinged with uncertainty.{/i}"
-    "Exiting the lab, the corridors of genAIcorp seem quieter, yet the whispers are more pronounced."
-    "Our journey is far from over, and the path ahead remains shrouded in mystery."
+    "{i}As Aian's essence ebbs away, a palpable tension permeates the air, leaving a void in its wake. It's a victory, albeit a melancholic one, shrouded in a veil of uncertainty.{/i}"
+    "The hum of genAIcorp's machinery seems more muted now, the once-familiar corridors echoing with an eerie silence."
+    "The weight of our choices, the consequences of our actions, hang heavy in the air, casting long shadows on the path that lies ahead."
 
-    hide alex with fadeout
-    hide vivian with fadeout
+    # Concluding the scene with a sense of closure and anticipation
+    hide alex
+    hide vivian
     scene bg black at truecenter with eyeclose
+
