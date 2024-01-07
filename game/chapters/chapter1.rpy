@@ -3,12 +3,15 @@
 # Start of the script
 label chapter1:
 
-    scene bg attack_socialMedia
+    scene bg player_office
+    $ alex_interaction = False
+    $ vivian_interaction = False
     
     # Introduction
-    "Another sunny day at genAIcorp. Not my dream job, but it pays the bills. As a QA junior tester, I've seen better days, but hey, it's not all bad."
-    "While I'm not exactly thrilled with my job, it's a stepping stone. I get to enjoy life's comforts, like, you know, not starving."
-    "But, enough chit-chat. Time to check those emails."
+    "Another sunny day at genAIcorp. Not my dream job, but it pays the bills. "
+    "As a QA junior tester, I've seen better days, but hey, it's not all bad."
+    "While I'm not exactly thrilled with my job, it's a stepping stone. "
+    "I get to enjoy life's comforts, like, you know, not starving."
     "Ah, my email address. Almost forgot amidst the chaos of last week."
     
     $ player_name = renpy.input("\"To log in, enter your name:\"").strip()
@@ -29,96 +32,108 @@ label chapter1:
             jump break_room
 
 label alex_lab:
+    scene bg alex_office
     show alex neutralDown at center
-    alex "[player_name], good you're here. We've got a situation."
-    player "What’s the scoop?"
+    alex "[player_name], glad you're here. We've got a bit of a mess."
+    player "What's going on, Alex?"
     show alex neutral at center
-    alex "My new AI system's acting up. Big time."
-    player "Given last week's layoffs, I wouldn't be shocked if someone's tampered with it."
+    alex "The AI system I've been working on is acting all kinds of wonky."
+    player "You think someone's been messing with it?"
     show alex neutralDown at center
-    alex "No, it's secure. This is different."
-    player "So, what's the deal?"
+    alex "Nah, our security's tight. This feels different."
+    player "Alright, spill the beans."
     show alex neutral at center
-    alex "Honestly, I don't know. It was smooth sailing, and now it's... not."
+    alex "Honestly? It was running smoothly, and now it's just... off."
     
     menu:
-        "Take a chill pill, Alex. Maybe step back?":
+        "Maybe take a breather, Alex? Grab a coffee or something.":
             show alex smile at center
-            alex "Wish I could. But I can't let the team down. And neither should you."
-            player "Hey, self-care's essential. Ever consider it?"
+            alex "I wish, but there's too much at stake. We've got to figure this out."
+            player "Look, we'll sort it. Maybe we both need a coffee break after this."
             show alex neutralDown at center
-            alex "Not all of us can jet off on vacations, [player_name]."
-            player "It's not about the trips. It's about balance."
-            alex "If you'd been more present last week, maybe we wouldn't be in this mess."
-            player "Doubtful. I can't work miracles."
-        "Why not loop in management?":
+            alex "Sounds good, but let's get through this first."
+        "What about bringing in some extra help?":
             show alex laugh at center
-            alex "Right, because they're in such a helpful mood after the layoffs?"
+            alex "Oh, you mean management? After last week's chaos? No thanks."
             show alex neutralDown at center
-            alex "We're on thin ice, [player_name]. Pushing management now would sink us."
-            player "We need a plan. Together."
-            alex "Then maybe curb the vacations, and focus on the job."
-            player "It's not about the vacations. It's about perspective."
-            alex "And yours needs a bit of tweaking."
+            alex "We're walking a tightrope here, [player_name]. Management's the last thing we need."
+            player "Alright, let's brainstorm then."
+            alex "Agreed. Let's bounce some ideas around."
 
-    alex "Sorry, that came out wrong. Stress talking. Was Iceland at least fun?"
-    player "Absolutely. Refreshing."
-    alex "Good for you."
-    alex "Back to business. Take this report to Sam. He'll guide us further."
-    player "Got it. Off to Sam’s."
-
+    alex "Alright, enough chit-chat. Can you take this report to Sam? He might have some insights."
+    player "On it. Heading to Sam's now."
+    $ alex_interaction = True
     hide alex
     jump sam_office
 
 label break_room:
+    scene bg alex_office
     show vivian at center
-    vivian "Hey, [player_name], good you're here."
-    player "What's cooking, Viv?"
-    vivian "How was Iceland? Refreshing?"
-    player "Exactly what the doctor ordered."
-    vivian "Glad to hear. Now, about this AI project..."
-    player "Given the recent layoffs, someone might have a grudge."
-    vivian "Doubtful. Security’s top-notch. But it's puzzling."
-    player "Alright, gotta head to Alex’s lab."
-    "As I approach, a note catches my eye: \"[player_name], urgent! With Sam. Meet there.\""
+    vivian "Hey, [player_name], look who finally decided to show up!"
+    player "Missed me, Viv?"
+    vivian "Oh, please! I just wanted to hear all about your Icelandic adventures."
+    player "It was like a breath of fresh air!"
+    
+    menu:
+        "Ask Vivian about her recent project updates.":
+            vivian "You know, the usual. Debugging here, testing there. But enough about work!"
+            player "Always the workaholic! Got any fun plans for the weekend?"
+            vivian "Thinking of binging that new series everyone's talking about. Join me?"
+        "Discuss the recent AI project hiccup.":
+            vivian "You heard about it too? It's causing quite the buzz around here."
+            player "After the layoffs, I wouldn't be surprised if someone's up to some mischief."
+            vivian "Haha, always the detective! But our security's tighter than my jeans after the holidays."
+        "Talk about the upcoming company event.":
+            vivian "Speaking of which, have you seen the invite for the company bash next week?"
+            player "I have! It's going to be epic. Are you going?"
+            vivian "Wouldn't miss it for the world!"
+    
+    player "Ok, duty calls. Off to Alex's lab for me."
+    "Just as I'm about to leave, a note on the table grabs my attention: \"[player_name], urgent! With Sam. Head there.\""
     hide vivian
+    $ vivian_interaction = True
     jump sam_office
+
 
 label sam_office:
     scene bg sam_office
 
-    "Sam's office feels like a pressure cooker. Papers everywhere, screens flashing, and an intensity you could cut with a knife."
+    "Sam's office is elegant and spacious. A far cry from my cramped cubicle."
     show sam smile at center
-    sam "[player_name], close the door. It's bad."
-    player "What's rattled you, Sam?"
-    sam "The AI's rogue. It's not just malfunctioning—it's spiraling out of control."
-    player "This is a nightmare. After all our hard work?"
-    sam "Focus, [player_name]. You need to find anomalies. We're on the brink."
-    player "I'm on it, Sam."
-    sam "Hurry. We need answers. Fast."
 
-    sam "Here's everything we know. Get to the bottom of this."
-    player "Got it."
+    if alex_interaction:
+        sam "[player_name], shut the door. I've heard from Alex about the situation with the AI."
+        player "Yes, it's dire."
+        sam "Indeed. He mentioned you're compiling a report. Hand it over. Let's see if we can salvage this mess."
 
-    "{i}As the door clicks shut, a cold silence fills the room. The weight of the AI's fate, our team's future, and the company's standing hangs heavy. It’s daunting, but I’m all in.{/i}"
+    elif vivian_interaction:
+        sam "[player_name], close the door. Vivian briefed me about the AI's erratic behavior."
+        player "It's escalating."
+        sam "Understood. She mentioned a report. Hand it to me. We need a solution, and fast."
+
+    player "Here's what I have."
+
+    "{i}The gravity of our predicament deepens. With each passing moment, the stakes grow higher.{/i}"
+    "{i}The AI's fate, our team's future, and the company's reputation are on the line. It's daunting, but I'm all in.{/i}"
 
     hide sam
     show sam smile at left
     show vivian neutralDown at center
-    vivian "[player_name], we're in deep. The AI's a ticking time bomb."
+    vivian "[player_name], this is critical. The AI's a ticking time bomb."
 
     show alex neutralDown at right
-    alex "We've dug deep. This isn't just a glitch. It's a disaster waiting to happen."
+    alex "We've done our homework. This isn't just a glitch. It's a catastrophe."
 
-    player "I’m compiling a report. We need to act."
+    sam "I'm piecing together a report. And I want you [player_name] to pass this list of questions to see if our friend still acts somewhat \"reliably\"."
+    sam "We need to know if it's still capable of making decisions. If it's not, we're in deep trouble."
+    sam "If it is, we can still salvage this mess. But we need to act fast."
+    sam "I also want you Vivian and Alex to assist [player_name] in this endeavor. We need all hands on deck."
+    alex "Clock's ticking. Let's rally."
 
-    show vivian neutralDown at center
-    vivian "How can we help?"
+    player "I hope we can pull this off."
 
-    show alex neutralDown at right
-    alex "Time's ticking. Let's get to work."
-
-    player "Agreed. We'll tackle this as a team."
-
-    "{i}With Vivian and Alex at my side, we plunge into the AI crisis. It's not just a technical hiccup; it's a full-blown crisis. But together, we'll face it head-on.{/i}"
+    "{i}With Vivian and Alex by my side, we dive headlong into the AI maelstrom. This isn't a minor setback; it's a monumental challenge. But united, we stand.{/i}"
+    hide sam
+    hide vivian
+    hide alex
     scene bg black at truecenter with eyeclose

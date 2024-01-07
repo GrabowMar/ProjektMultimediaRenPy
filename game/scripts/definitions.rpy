@@ -11,7 +11,10 @@
 
 init python:
     import re # regex for parsing file name
+    import random
 
+
+    message_sound = "audio/sfx/message.wav"
 
 
 
@@ -275,7 +278,6 @@ init:
         "unsure unsure",
         "vicious vicious",
         "almostDead almostDead",
-
         "confident confident",
         "confused confused",
         "crying crying"
@@ -366,9 +368,12 @@ init:
     image bg attack_corruption = "images/bg/bg attack_corruption.png"
     image bg attack_criticalInfrastructure = "images/bg/bg attack_criticalInfrastructure.png"
     image bg sam_office = "images/bg/bg sam_office.png"
+    image bg player_office = "images/bg/bg player_office.png"
+    image bg alex_office = "images/bg/bg alex_office.png"
+    image bg ai_lab = "images/bg/bg ai_lab.png"
 
 
-
+    
 
 
 
