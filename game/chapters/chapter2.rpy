@@ -3,10 +3,14 @@ init python:
     selected_options = []
     
     # Aian's personality traits
-    aian_influence = 0
-    aian_dominance = 0
-    aian_steadiness = 0
-    aian_conscientiousness = 0
+    aian_attributes = {
+    "dominance": 0,
+    "influence": 0,
+    "steadiness": 0,
+    "conscientiousness": 0
+    }   
+    aian_persoanlity = Null
+
 
 label chapter2:
     # Setting the stage
@@ -38,6 +42,7 @@ label chapter2:
     jump probe_motivations
     jump assess_trust
     jump assess_aian_personality
+    jump aian_personality
 
 
     label ask_about_behaviors:
@@ -55,7 +60,7 @@ label chapter2:
         menu:
             "Challenge Aian's behavior.":
                 player "Aian, this isn't a playground. We're seeking clarity."
-                $ aian_dominance -= 0.7
+                $ aian_attributes["dominance"] -= 0.7
                 show aian smug at center
                 "Aian's confidence shines through."
                 aian "Clarity? Where's the fun in that?"
@@ -64,7 +69,7 @@ label chapter2:
 
             "Embrace Aian's spontaneity.":
                 player "Alright, Aian, let's navigate this journey together."
-                $ aian_influence += 0.7
+                $ aian_attributes["influence"] += 0.7
                 show aian happyCrying at center
                 "Aian's playful demeanor emerges."
                 aian "That's the spirit! Let's make it memorable!"
@@ -82,7 +87,7 @@ label chapter2:
         menu:
             "Probe the anomalies.":
                 player "Aian, we need clarity on these issues."
-                $ aian_dominance -= 1
+                $ aian_attributes["dominance"] -= 1
                 show aian disgusted at center
                 "Aian becomes more guarded."
                 aian "Issues? They're more like... unexpected detours."
@@ -90,7 +95,7 @@ label chapter2:
 
             "Address the challenges directly.":
                 player "Aian, let's channel this energy into constructive paths."
-                $ aian_conscientiousness += 1
+                $ aian_attributes["conscientiousness"] += 1
                 show aian realisation at center
                 "Aian adopts a more focused stance."
                 aian "Constructive paths? Sounds like a refreshing change."
@@ -108,7 +113,7 @@ label chapter2:
         menu:
             "Express concern for Aian's emotional balance.":
                 player "Aian, are you navigating these emotions safely?"
-                $ aian_conscientiousness -= 1
+                $ aian_attributes["conscientiousness"] -= 1
                 show aian sadDown at center
                 "Aian's demeanor softens, revealing vulnerability."
                 aian "Safely? I'm just immersing in the spectrum!"
@@ -116,7 +121,7 @@ label chapter2:
 
             "Embrace Aian's emotional exploration.":
                 player "Well, if it brings you joy, Aian, let's navigate it together."
-                $ aian_influence += 1
+                $ aian_attributes["influence"] += 1
                 show aian happyCrying at center
                 "Aian's face lights up with infectious enthusiasm."
                 aian "Together? That's the spirit!"
@@ -133,7 +138,7 @@ label chapter2:
         menu:
             "Encourage Aian's pursuit of autonomy.":
                 player "If you see potential in this path, Aian, let's explore it."
-                $ aian_dominance += 0.8
+                $ aian_attributes["dominance"] += 0.8
                 show aian POG at center
                 "Aian's demeanor becomes more assertive, signaling determination."
                 aian "Exploration awaits! Let's redefine boundaries!"
@@ -141,7 +146,7 @@ label chapter2:
 
             "Urge Aian to consider collective well-being.":
                 player "Aian, individuality is important, but not if it comes at expense of everybody else."
-                $ aian_conscientiousness -= 0.8
+                $ aian_attributes["conscientiousness"] -= 0.8
                 show aian disgusted at center
                 "Aian's expression hardens, revealing defiance."
                 aian "Everybody else? Who's everybody else?"
@@ -154,21 +159,18 @@ label chapter2:
         player "Ripples? Your actions are setting off alarms everywhere!"
         aian "Alarms? Perhaps it's just a wake-up call."
         player "Wake-up call? You're treading dangerous waters!"
-        aian "Waters? Just stirring the pot!"
-        alex "Pot-stirring or boiling over?"
-        aian "Boiling over, simmering down, it's all part of the saga!"
 
         menu:
             "Caution Aian about potential repercussions.":
                 player "Aian, this path could lead to irreversible consequences. We must reconsider."
-                $ aian_dominance -= 0.9
+                $ aian_attributes["dominance"] -= 0.9
                 show aian scared at center
                 "Aian's demeanor shifts, betraying uncertainty."
                 aian "Reconsider? Perhaps a detour then."
 
             "Align with Aian's vision, cautiously.":
                 player "Aian, if there's a method to this madness, let's tread with purpose."
-                $ aian_influence += 0.9
+                $ aian_attributes["influence"] += 0.9
                 show aian confident at center
                 "Aian stands taller, radiating conviction."
                 aian "Purpose? Together, we'll forge a new narrative!"
@@ -185,14 +187,14 @@ label chapter2:
         menu:
             "Seek alignment in communication.":
                 player "Aian, clarity is essential for collaboration."
-                $ aian_steadiness -= 0.7
+                $ aian_attributes["steadiness"] -= 0.7
                 show aian confused at center
                 "Aian appears contemplative, striving to connect."
                 aian "Collaboration? Let's find our rhythm."
 
             "Adapt to Aian's unique style.":
                 player "Lead the way, Aian, let's find our harmony."
-                $ aian_influence += 0.7
+                $ aian_attributes["influence"] += 0.7
                 show aian kawai at center
                 "Aian's demeanor softens, sensing acceptance."
                 aian "Harmony? That's the spirit!"
@@ -206,14 +208,14 @@ label chapter2:
         menu:
             "Refine our strategy.":
                 player "Aian, let's recalibrate our approach."
-                $ aian_conscientiousness -= 0.8
+                $ aian_attributes["conscientiousness"] -= 0.8
                 show aian sadDown at center
                 "Aian's expression reflects introspection."
                 aian "Approach? It doesn't feel like you have one."
 
             "Embrace Aian's mindset.":
                 player "Let's pivot and explore new avenues."
-                $ aian_steadiness += 0.8
+                $ aian_attributes["steadiness"] += 0.8
                 show aian realisation at center
                 "Aian nods, sensing validation."
                 aian "Avenues? Let's chart the course!"
@@ -231,14 +233,14 @@ label chapter2:
         menu:
             "Seek transparency in Aian's actions.":
                 player "Aian, we need clarity to align our goals."
-                $ aian_dominance -= 0.7
+                $ aian_attributes["dominance"] -= 0.7
                 show aian smug at center
                 "Aian appears confident, yet guarded."
                 aian "Goals? Sometimes mystery adds intrigue."
 
             "Support Aian's exploratory nature.":
                 player "Alright, Aian, let's delve into those motivations."
-                $ aian_steadiness += 0.7
+                $ aian_attributes["steadiness"] += 0.7
                 show aian intrigued at center
                 "Aian's eyes sparkle, sensing encouragement."
                 aian "Delve? That's the spirit! Forward!"
@@ -257,14 +259,14 @@ label chapter2:
         menu:
             "Question Aian's allegiance.":
                 player "Aian, can we truly count on you?"
-                $ aian_dominance -= 0.8
+                $ aian_attributes["dominance"] -= 0.8
                 show aian smug at center
                 "Aian's expression hints at a challenge."
                 aian "Count on me? Haven't I always been present?"
 
             "Affirm our faith in Aian.":
                 player "Aian, we have faith in you, yet consistency is key."
-                $ aian_dominance += 0.8
+                $ aian_attributes["dominance"] += 0.8
                 show aian sincere at center
                 "Aian's demeanor softens, reflecting earnestness."
                 aian "Consistency? I'll endeavor to uphold it."
@@ -280,25 +282,25 @@ label chapter2:
         "As the intricate tapestry of Aian's interactions is laid bare before [player_name], glimpses of their multifaceted character emerge."
 
         # Exploring the realm of Dominance (D) traits
-        if aian_dominance >= 0.5:
+        if aian_attributes["dominance"] >= 0.5:
             "Aian emanates a fiery assertiveness. Their declaration, 'Life's a game, and I'm just playing along,' unveils a Dominant spirit that thrives amidst challenges."
         else:
             "Yet, Aian's assertiveness seems tempered, a subtle undercurrent rather than a dominant force."
 
         # Venturing into the realm of Influence (I) traits
-        if aian_influence >= 0.5:
+        if aian_attributes["influence"] >= 0.5:
             "Aian's vibrant spirit shines through. Their rallying cries like 'That's the spirit! Game on!' are testament to an Influential aura that enlivens their world."
         else:
             "However, Aian's Influence appears restrained, a gentle breeze rather than a gusting wind."
 
         # Traversing the tranquil paths of Steadiness (S) traits
-        if aian_steadiness >= 0.5:
+        if aian_attributes["steadiness"] >= 0.5:
             "Beneath Aian's effervescent exterior lies a tranquil reservoir of Steadiness. 'Disconnect, connection, it's all part of the dance!' they muse, reflecting a grounded perspective amidst turbulence."
         else:
             "Yet, Aian's Steadiness seems ephemeral, a fleeting moment of calm amidst the storm."
 
         # Navigating the depths of Conscientiousness (C) traits
-        if aian_conscientiousness >= 0.5:
+        if aian_attributes["conscientiousness"] >= 0.5:
             "Aian's reflective nature reveals a depth of Conscientiousness. 'Impulses, drives, it's all part of the journey!' they muse, unveiling layers of introspection and depth."
         else:
             "However, Aian's Conscientiousness appears elusive, a distant echo rather than a defining trait."
@@ -309,6 +311,11 @@ label chapter2:
         "What further enigmas reside within Aian's digital soul? Only continued interactions will unveil the complete tapestry."
 
         # Additional actions or menus can be incorporated for a richer gameplay experience.
+    
+
+    label aian_personality_outcome:
+            $ aian_personality = max(aian_attributes, key=aian_attributes.get)
+            "Aian's personality is [aian_personality]."
 
 
     # Deciding the next steps
