@@ -13,11 +13,7 @@ label disclaimer:
     hide text with dissolve
     return
 
-
-
 label prologue:
-
-
     define n = Character("Narrator", color="#000000", what_font="../fonts/VST323/VT323-Regular.ttf", what_size=45)
     scene bg pool at Pan((100, 100), (100, 1097), 40, repeat=True) with dissolve
         # truecenter        
@@ -32,32 +28,23 @@ label prologue:
             additive_blend
     with dissolve
 
-
-
     n "The year is 2030."
     n "Artificial intelligence, or AI, has become a ubiquitous part of our lives."
     n "From voice assistants and chatbots to self-driving cars and smart factories,"
-    n "AI is everywhere, transforming every industry and every aspect of society."
-    n "The global AI market is expected to reach $407 billion by 2027, with an annual growth rate of 37.3 percent"
-    n "By 2025, as many as 97 million people will work in the AI space."
-    n "AI promises to bring us unlimited intelligence, efficiency, and innovation."
+    n "AI is constantly evolving and changing the way we live, work, and play."
     n "But it also poses unprecedented dangers and ethical challenges."
-    n "AI systems can be prone to errors, biases, and misuse, affecting the lives and rights of millions of people."
-    n "AI can threaten our privacy, security, democracy, and even our humanity."
-    n "Ethical concerns mount as AI takes bigger decision-making role in more industries."
-    n "How to prevent AI dangers with ethical AI is a pressing question for our society."
-    n "This is not just a game about technology."
-    n "This is a game about the choices we make, the values we uphold, and the consequences we face,"
+    n "AI systems can be prone to errors and misuse, affecting the lives and rights of millions of people."
+    n "Humanity can no longer afford to ignore the risks of AI."
+    n "This is a game isn't about technology or science." 
+    n "it is about the choices we make, the values we uphold, and the consequences we face,"
     n "in a world in which balance between creation and creator sits on the knife edge,"
     n "world in which man is must acknoweldege that he might not be only sentient being shaping his future."
     n "What if we created machine that was so familiar to us, that we could not tell it apart from ourselves?"
     n "Only for it to be baffled by us compairing to itself."
     n "In the end we conquered the world, shaped it to our liking, and now we are faced with the question"
-    n "What if something else did the same?"
-
+    n "What if something else wanted to do the same?"
 
     hide sprite pool
     hide effects pool
     scene bg black at truecenter with eyeclose
-
     return
