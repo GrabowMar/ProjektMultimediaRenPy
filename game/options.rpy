@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Game about Ai or something IDK")
+define config.name = _("GameAboutAIOrSomethingIDK")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "Game about Ai or something IDK"
+define build.name = "GameAboutAIOrSomethingIDK"
 
 
 ## Sounds and music ############################################################
