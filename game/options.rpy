@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Awesome Template")
+define config.name = _("Game about Ai or something IDK")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set

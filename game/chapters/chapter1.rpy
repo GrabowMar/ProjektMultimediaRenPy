@@ -5,7 +5,7 @@ init python:
 
 # Start of the script
 label chapter1:
-
+    play music "../audio/ambience/GoodEnough.mp3" fadein 5.0
     scene bg player_office
     
     
@@ -157,3 +157,4 @@ label sam_office:
 
     hide sam
     scene bg black at truecenter with eyeclose
+    return

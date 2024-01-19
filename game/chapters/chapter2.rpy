@@ -29,14 +29,8 @@ init python:
     assess_trust_selected = False
     assess_aian_personality_selected = False
 
-
-
-    #write aian personalities:
-    #"GRRRRRR, happyCrying, holUP, irritated, kawai, kissy, love, dead, disgusted, dizzy, flirty, flushes, grossedOut, mimic, notConfident, omnomnom, pissedOff, POG, readyForCarnage, realisation, scared, smug, stupidHappy, thinking, tongue, ughhhh, unsure, vicious, almostDead, confident, confused, crying"
-    
-
-
 label chapter2:
+    play music "../audio/ambience/NotesUnderTables.mp3" fadein 5.0
     # Setting the stage
     show alex at right
     show vivian at left
@@ -138,7 +132,7 @@ label chapter2:
         "You are repeating yourself.":
             aian "Hello [player_name], how are you today?"
         "Hello Aian.":
-            aian "The weather outside is good for a walk, 24.9 degrees Celsius, 0% chance of rain."
+            aian "The weather outside is good for a walk, 24.9 degrees Celsius, 0 percent chance of rain."
     player "..."
     aian "Hello, my name is Aian. I'm a general purpose bot created by genAIcorp."
     vivian "It seems our infrastructure is failing because I don't see anything on my end."
@@ -180,9 +174,6 @@ label chapter2:
             "Assess Aian's trustworthiness." if not assess_trust_selected:
                 $ assess_trust_selected = True
                 jump assess_trust
-            "Assess Aian's personality." if not assess_aian_personality_selected:
-                $ assess_aian_personality_selected = True
-                jump assess_aian_personality
             "{i}{b}Conclude the assessment.{/i}{/b}":
                 jump assess_aian_personality
 
@@ -363,8 +354,11 @@ label chapter2:
         "What further enigmas reside within Aian's digital soul? Only continued interactions will unveil the complete tapestry."
         $ aian_personality = max(aian_attributes, key=aian_attributes.get)        
         
-
+        hide aian
         hide alex
         hide vivian
         scene bg black at truecenter with eyeclose
+        "GAME SHOULD HAVE TWO CHAPTERS MORE BUT DUE TO TIME CONSTRAINTS IT ENDS HERE"
+        "THANK YOU FOR PLAYING"
+        return
 

@@ -1,12 +1,12 @@
 label disclaimer:
     scene black
     stop music fadeout 1.0
-    show text "{color=#FFFFFF}Disclaimer: This game is a work of fiction and does not intend to represent or depict any actual event, person, or entity. The game may contain some mistakes and inaccuracies regarding the science, technology, and ethics of artificial intelligence. The game is not meant to provide any authoritative or definitive information on the topic. The game is meant for educational purposes only. The views and opinions expressed in the game are not those of the authors and do not necessarily reflect AI field in accurate field. The authors are not responsible for any harm or damage caused by the game or its content. Play at your own risk. \n\nClick to continue...{/color}" with dissolve
+    show text "{color=#FFFFFF}Disclaimer: This game is a work of fiction and does not intend to represent or depict any actual event, person, or entity. The game may contain some mistakes and inaccuracies regarding the science, technology, and ethics of artificial intelligence. The game is not meant to provide any authoritative or definitive information on the topic. The game is meant for educational purposes only. The views and opinions expressed in the game are not those of the authors and do not necessarily reflect AI field in accurate way. \n  \n Game uses assets from AwesomeTemplate by RuolinZheng08, images are provided by Unsplash and Stylar AI image creator. Music created by Marcin Grabowski. \n\nClick to continue...{/color}" with dissolve
     pause
     play music "../audio/ambience/TenseIntroduction.mp3" fadein 5.0
     show text "{color=#FFFFFF}Marcin Grabowski and Andrii Yarosh present...{/color}" with dissolve
     with Pause(2)
-    show text "{color=#FFFFFF}Tile{/color}" with dissolve
+    show text "{color=#FFFFFF}Game about AI or Somethink IDK{/color}" with dissolve
     with Pause(2)
     hide text with dissolve
     

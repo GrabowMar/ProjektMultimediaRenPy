@@ -335,56 +335,13 @@ init:
         attribute_function Picker(aianExpressions)
 
 
-    image bg attack_cybersecurity = "images/bg/bg attack_cybersecurity.png"
-    image bg attack_eliminationAI = "images/bg/bg attack_eliminationAI.png"
-    image bg attack_politicalInstability = "images/bg/bg attack_politicalInstability.png"
-    image bg attack_socialMedia = "images/bg/bg attack_socialMedia.png"
-    image bg background_car = "images/bg/bg background_car.png"
+
     image bg background_datacenter = "images/bg/bg background_datacenter.png"
     image bg background_desk = "images/bg/bg background_desk.png"
-    image bg background_infinity = "images/bg/bg background_infinity.png"
-    image bg background_internet = "images/bg/bg background_internet.png"
-    image bg background_singularity = "images/bg/bg background_singularity.png"
-    image bg background_street = "images/bg/bg background_street.png"
-    image bg best_ending = "images/bg/bg best_ending.png"
-    image bg hallway = "images/bg/bg bg bg hallway.png"
-    image bg house = "images/bg/bg bg bg house.png"
-    image bg snowbridge = "images/bg/bg bg bg snowbridge.png"
-    image bg ending_aiDestroyed = "images/bg/bg ending_aiDestroyed.png"
-    image bg ending_bad = "images/bg/bg ending_bad.png"
-    image bg ending_carCrush = "images/bg/bg ending_carCrush.png"
-    image bg good_ending = "images/bg/bg good_ending.png"
-    image bg outcome_civilUnrest = "images/bg/bg outcome_civilUnrest.png"
-    image bg outcome_dataCorruption = "images/bg/bg outcome_dataCorruption.png"
-    image bg outcome_financialCrisis = "images/bg/bg outcome_financialCrisis.png"
-    image bg outcome_outage = "images/bg/bg outcome_outage.png"
-    image bg outcome_riots = "images/bg/bg outcome_riots.png"
-    image bg outcome_virus = "images/bg/bg outcome_virus.png"
-    image bg outcome_war = "images/bg/bg outcome_war.png"
-    image bg police_ending = "images/bg/bg police_ending.png"
-    image bg worst_ending = "images/bg/bg worst_ending.png"
-    image bg ai_creates_malware = "images/bg/bg ai_creates_malware.png"
-    image bg ai_demonstration = "images/bg/bg ai_demonstration.png"
-    image bg attack_corruption = "images/bg/bg attack_corruption.png"
-    image bg attack_criticalInfrastructure = "images/bg/bg attack_criticalInfrastructure.png"
     image bg sam_office = "images/bg/bg sam_office.png"
     image bg player_office = "images/bg/bg player_office.png"
     image bg alex_office = "images/bg/bg alex_office.png"
     image bg ai_lab = "images/bg/bg ai_lab.png"
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
 
     ## miscellaneous images
     define parallax_bg_size = (2200, 1237) # needs to be bigger than the screen size (1920, 1080)
