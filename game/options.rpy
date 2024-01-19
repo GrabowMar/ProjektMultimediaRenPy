@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "AwesomeTemplate"
+define build.name = "Game about Ai or something IDK"
 
 
 ## Sounds and music ############################################################
